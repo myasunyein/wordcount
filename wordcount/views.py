@@ -14,6 +14,7 @@ def home(request):
 
 def count(request):
     fulltext=request.GET['fulltext']
+        
     print(fulltext)
 
     wordlist=fulltext.split()
@@ -29,3 +30,11 @@ def count(request):
     sortedwords=sorted(worddictionary.items(), key=operator.itemgetter(1), reverse=True)
     
     return render(request,'count.html',{'fulltext':fulltext,'count':len(wordlist),'worddictionary':worddictionary.items(),'sortedwords':sortedwords})
+
+
+def about(request):
+
+    about=request.GET['about']
+
+
+    return render(request, 'about.html', {'about':about})
