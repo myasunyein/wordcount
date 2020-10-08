@@ -1,0 +1,39 @@
+<h1>There are {{count}} words present in the sentence </h1>
+
+<h2>Your text:</h2>
+{{fulltext}}
+
+<h2>Word count total:</h2>
+
+{%for word, counttotal in worddictionary%}
+
+
+
+{{word}}
+
+<br/>
+
+{{counttotal}}
+
+<br/>
+
+{%endfor%}
+
+
+<br/> 
+
+<br/>
+
+<h1>Another sorted words</h1>
+
+{%for word, counttotal in sortedwords%}
+
+{{word}}
+
+<br/>
+
+{{counttotal}}
+
+<br/>
+
+{%endfor%}
